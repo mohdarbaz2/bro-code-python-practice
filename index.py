@@ -1,24 +1,15 @@
-# conditional expression = A one-line shortcut for the if-else statement (ternary operator) Print or assign one of two values based on a condition
-# X if condition else Y
+# validate user input exercise
+# 1. Username is no more than 12 characters
+# 2. Username must not contain spaces
+# 3. Username must not contain digits
 
-# name = input("Enter your full name: ")
-# phone_number = input("Enter your phone #: ")
+username = input("Enter a username:")
 
-#result =len(name)
-# result =name.find("A")
-# result = name.rfind("o")
-# result = name.rfind("q")
-# result = name.capitalize()
-# name = name.upper()
-# name = name.lower()
-# result= name.isdigit()
-# result = name.isalpha()
-# result = phone_number.count("-")
-# phone_number= phone_number.replace("-"," ")
-new =help(str)
-print(new)
-
-# print(result)
-# print(name)
-# print(result)
-print(phone_number)
+if len(username)>12:
+    print("Your username can't be more than 12 characters")
+elif not username.find(" ") == -1:
+    print("Your username can't contain spaces")
+elif not username.isalpha():
+    print("Your username can't contain numbers")
+else:
+    print(f"Welcome {username}")
